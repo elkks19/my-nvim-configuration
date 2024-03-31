@@ -32,6 +32,17 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 keymap.set("n", "<leader>fe", "<cmd>Telescope emoji<cr>")
 keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>")
 
+keymap.set("n", "<C-1>", "1gt")
+keymap.set("n", "<C-2>", "2gt")
+keymap.set("n", "<C-3>", "3gt")
+keymap.set("n", "<C-4>", "4gt")
+keymap.set("n", "<C-5>", "5gt")
+keymap.set("n", "<C-6>", "6gt")
+keymap.set("n", "<C-7>", "7gt")
+keymap.set("n", "<C-8>", "8gt")
+keymap.set("n", "<C-9>", "9gt")
+keymap.set("n", "<C-9>", "0gt")
+
 keymap.set("n", "<leader>tt", ":ToggleTerm size=75 direction=vertical<CR>")
 keymap.set("t", "<esc>", "<C-\\><C-n> :close<CR>")
 
