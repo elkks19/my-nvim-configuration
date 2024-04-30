@@ -46,6 +46,16 @@ keymap.set("n", "<C-9>", "0gt")
 keymap.set("n", "<leader>tt", ":ToggleTerm size=75 direction=vertical<CR>")
 keymap.set("t", "<esc>", "<C-\\><C-n> :close<CR>")
 
+-- GUARDAR CON CTRL+S
+keymap.set("n", "<C-s>", "<cmd>w<CR>")
+keymap.set("i", "<C-s>", "<cmd>w<CR>")
+keymap.set("v", "<C-s>", "<cmd>w<CR>")
+
+-- BORAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE
+keymap.set("i", "<C-BS>", "<C-w>")
+
+
+
 vim.keymap.set("n", "<leader>nt", function()
   require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })
