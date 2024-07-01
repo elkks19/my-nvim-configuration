@@ -1,6 +1,6 @@
-Espacio  + c es para borrar los resultados de una busqueda.
+Espacio  + c es para borrar los resultados de una búsqueda.
 
-Para hacer la busqueda se hace el / y luego lo que se busca.
+Para hacer la búsqueda se hace el / y luego lo que se busca.
 
 Las teclas de movimiento son hjkl pero para salir del modo insertar, se apreta j y k a la vez.
 
@@ -74,3 +74,15 @@ Shift + k para buscar en las páginas de manuales la función que está sobre el
 
 Control + s para guardar
 Control + backspace para borrar la palabra antes del cursor
+
+Control + j en el modo insertar para bajar a la siguiente recomendacion del lsp
+Control + k en el modo insertar para subir a la siguiente recomendacion del lsp
+Control + e para quitar todas las recomendaciones del lsp
+Enter para confirmar la recomendacion del lsp
+
+PARA EL CMP
+	gd para ir a la definición
+	gD para ir a la definición en una nueva pestaña
+	gi para ir a la implementación
+	K para ver la documentación
+

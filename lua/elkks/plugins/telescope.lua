@@ -24,10 +24,16 @@ telescope.setup({
          },
       },
 	  extensions = {
+		  ["ui-select"] = {
+			  require("telescope.themes").get_dropdown {
+
+			  }
+		  },
+
 		  emoji = {
 			  action = function(emoji)
-				vim.fn.setreg("", emoji.value)
-		        print([[Presiona p o "*p para pegar este emoji]] .. emoji.value)
+				  vim.fn.setreg("", emoji.value)
+				  print([[Presiona p o "*p para pegar este emoji]] .. emoji.value)
 			  end,
 		  }
 	  },
@@ -36,4 +42,4 @@ telescope.setup({
 
 telescope.load_extension("fzf")
 telescope.load_extension("emoji")
-
+telescope.load_extension("ui-select")
