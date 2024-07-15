@@ -53,8 +53,10 @@ keymap.set("n", "<C-s>", "<cmd>w<CR>")
 keymap.set("i", "<C-s>", "<cmd>w<CR>")
 keymap.set("v", "<C-s>", "<cmd>w<CR>")
 
--- BORAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE
+-- BORRAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE
 keymap.set("i", "<C-BS>", "<C-w>")
+-- BORRAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE EN LA TERMINAL DE GNOME
+keymap.set("i", "<C-H>", "<C-W>")
 
 
 
