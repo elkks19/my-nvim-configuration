@@ -19,7 +19,7 @@ end
 
 local cmp_setup, cmp = pcall(require, "cmp")
 if not cmp_setup then
-	return 
+	return
 end
 
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())

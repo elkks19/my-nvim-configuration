@@ -81,11 +81,15 @@ return packer.startup(function(use)
 		}
 	}
 	-- LSP
-	
+
 	-- CMP
 	use('saadparwaiz1/cmp_luasnip')
 	use('rafamadriz/friendly-snippets')
 	-- CMP
+
+	-- LARAVEL
+	use('jwalton512/vim-blade')
+	-- LARAVEL
 
 	if packer_bootstrap then
 		require("packer").sync()

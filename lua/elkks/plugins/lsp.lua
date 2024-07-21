@@ -18,7 +18,33 @@ vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
 require('mason-lspconfig').setup({
 	handlers = {
 		function(server_name)
-			require('lspconfig')[server_name].setup({})
+			if server_name ~= 'emmet_ls'
+				or server_name ~= 'intelephense'
+
+				then
+				require('lspconfig')[server_name].setup({})
+			end
+
+			require('lspconfig')['emmet_ls'].setup({
+				filetypes = {
+					'html',
+					'css',
+					'scss',
+					'javascript',
+					'vue',
+					'blade',
+					'json',
+					'md',
+					'markdown',
+				}
+			})
+
+			require('lspconfig')['intelephense'].setup({
+				filetypes = {
+					'blade',
+					'php',
+				}
+			})
 		end,
 	},
 
@@ -43,7 +69,6 @@ require('mason-lspconfig').setup({
 		'jdtls',
 		'quick_lint_js',
 		'tsserver',
-		'ltex',
 		'texlab',
 		'lua_ls',
 		'autotools_ls',
