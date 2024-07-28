@@ -62,7 +62,6 @@ require('mason-lspconfig').setup({
 		'emmet_language_server',
 		'emmet_ls',
 		'glsl_analyzer',
-		'glslls',
 		'html',
 		'htmx',
 		'jsonls',
