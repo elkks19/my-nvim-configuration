@@ -58,6 +58,12 @@ keymap.set("i", "<C-BS>", "<C-w>")
 -- BORRAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE EN LA TERMINAL DE GNOME
 keymap.set("i", "<C-H>", "<C-W>")
 
+-- Toggle Twilight
+keymap.set("n", "<leader>td", ":Twilight<CR>")
+
+-- Toggle Markdown Preview
+keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>")
+
 
 
 vim.keymap.set("n", "<leader>nt", function()

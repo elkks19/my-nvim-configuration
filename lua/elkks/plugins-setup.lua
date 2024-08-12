@@ -91,6 +91,17 @@ return packer.startup(function(use)
 	use('jwalton512/vim-blade')
 	-- LARAVEL
 
+	-- THE NEXT PLUGIN DIMMS STUFF OUTSIDE OF THE CURRENT CODE BLOCK
+	use ("folke/twilight.nvim")
+	--
+
+	-- MARKDOWN PREVIEWER
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+	-- MARKDOWN PREVIEWER
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

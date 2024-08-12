@@ -86,3 +86,9 @@ PARA EL CMP
 	gi para ir a la implementación
 	K para ver la documentación
 
+TWILIGHT ES UNA EXTENSION QUE HACE DIMM EN EL FONDO DEL CODIGO QUE NO ESTAMOS USANDO
+	Espacio + td para hacerle toggle (por defecto esta desactivada al inicio)
+
+PARA ACTIVAR O DESACTIVAR LA VISTA PREVIA DE ARCHIVOS MARKDOWN
+	Espacio + mp 
+
