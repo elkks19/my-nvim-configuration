@@ -93,7 +93,11 @@ return packer.startup(function(use)
 
 	-- THE NEXT PLUGIN DIMMS STUFF OUTSIDE OF THE CURRENT CODE BLOCK
 	use ("folke/twilight.nvim")
-	--
+	-- twilight
+
+	-- LIVE SERVER
+	use('barrett-ruth/live-server.nvim')
+	-- LIVE SERVER
 
 	-- MARKDOWN PREVIEWER
 	use({

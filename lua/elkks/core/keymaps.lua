@@ -64,6 +64,9 @@ keymap.set("n", "<leader>td", ":Twilight<CR>")
 -- Toggle Markdown Preview
 keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>")
 
+-- INICIAR O TERMINAR LIVE SERVER EN EL PWD DE LA TERMINAL
+keymap.set("n", "<leader>ls", ":LiveServerToggle<CR>")
+
 
 
 vim.keymap.set("n", "<leader>nt", function()
