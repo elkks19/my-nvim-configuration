@@ -67,7 +67,11 @@ keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>")
 -- INICIAR O TERMINAR LIVE SERVER EN EL PWD DE LA TERMINAL
 keymap.set("n", "<leader>ls", ":LiveServerToggle<CR>")
 
-
+-- CAMBIAR EL TAMAÑO DE LA VENTANA USANDO ALT + VIM MOTIONS
+keymap.set("n", "<A-l>", "<C-w><")
+keymap.set("n", "<A-h>", "<C-w>>")
+keymap.set("n", "<A-k>", "<C-w>+")
+keymap.set("n", "<A-j>", "<C-w>-")
 
 vim.keymap.set("n", "<leader>nt", function()
   require("todo-comments").jump_next()
