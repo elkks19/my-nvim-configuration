@@ -72,6 +72,11 @@ keymap.set("n", "<A-l>", "<C-w><")
 keymap.set("n", "<A-h>", "<C-w>>")
 keymap.set("n", "<A-k>", "<C-w>+")
 keymap.set("n", "<A-j>", "<C-w>-")
+-- CAMBIAR EL TAMAÑO DE LA VENTANA A MAS VELOCIDAD HACIENDO USO DE ALT + SHIFT + VIM MOTIONS
+keymap.set("n", "<A-L>", "5<C-w><")
+keymap.set("n", "<A-H>", "5<C-w>>")
+keymap.set("n", "<A-K>", "5<C-w>+")
+keymap.set("n", "<A-J>", "5<C-w>-")
 
 vim.keymap.set("n", "<leader>nt", function()
   require("todo-comments").jump_next()
