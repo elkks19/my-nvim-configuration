@@ -28,6 +28,7 @@ require('mason-lspconfig').setup({
 			require('lspconfig')['emmet_ls'].setup({
 				filetypes = {
 					'html',
+					'templ',
 					'css',
 					'scss',
 					'javascript',
