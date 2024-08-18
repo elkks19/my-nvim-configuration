@@ -40,6 +40,7 @@ treesitter.setup({
 		"tsx",
 		"html",
 		"typescript",
+		"templ",
 		"tsx",
 		"lua",
 		"json",
