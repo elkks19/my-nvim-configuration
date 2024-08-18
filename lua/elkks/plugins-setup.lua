@@ -26,10 +26,19 @@ end
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
-	-- colorschemes
+
+	-- COLORSCHEMES
 	use("arturgoms/moonbow.nvim")
 	use("drewtempelmeyer/palenight.vim")
 	use("morhetz/gruvbox")
+	use("catppuccin/nvim")
+    use("michaeldyrynda/carbon")
+    use("sainnhe/gruvbox-material")
+	use("savq/melange-nvim")
+	use("xero/miasma.nvim")
+	use("rebelot/kanagawa.nvim")
+	use("ptdewey/darkearth-nvim")
+	-- COLORSCHEMES
 
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer")
