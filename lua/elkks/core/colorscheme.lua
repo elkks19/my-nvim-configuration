@@ -2,11 +2,11 @@ vim.o.background = "dark"
 
 -- INFO: KANAGAWA
 --
--- local status, colorscheme = pcall(vim.cmd, "colorscheme kanagawa")
--- if not status then
--- 	print("no se encontró kanagawa")
--- return
--- end
+local status, colorscheme = pcall(vim.cmd, "colorscheme kanagawa")
+if not status then
+	print("no se encontró kanagawa")
+return
+end
 
 
 -- INFO: MIASMA
@@ -45,11 +45,11 @@ vim.o.background = "dark"
 
 -- INFO: MOONBOW
 --
-local status, colorscheme = pcall(vim.cmd, "colorscheme moonbow")
-if not status then
-	print("no se encontró moonbow")
-	return
-end
+-- local status, colorscheme = pcall(vim.cmd, "colorscheme moonbow")
+-- if not status then
+-- 	print("no se encontró moonbow")
+-- 	return
+-- end
 
 -- INFO: DARKEARTH
 --
