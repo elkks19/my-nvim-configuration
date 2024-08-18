@@ -1,6 +1,6 @@
 vim.o.background = "dark"
 
--- INFO: KANAGAWA
+-- INFO: KANAGAWA WILL BE THE DEFAULT COLORSHEME
 --
 local status, colorscheme = pcall(vim.cmd, "colorscheme kanagawa")
 if not status then

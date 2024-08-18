@@ -48,6 +48,9 @@ keymap.set("n", "<A-0>", "0gt")
 keymap.set("n", "<leader>tt", ":ToggleTerm size=75 direction=vertical<CR>")
 keymap.set("t", "<esc>", "<C-\\><C-n> :close<CR>")
 
+-- CHANGE THE COLORSCHEME
+keymap.set("n", "<leader>cs", "<cmd>Telescope colorscheme<cr>")
+
 -- GUARDAR CON CTRL+S
 keymap.set("n", "<C-s>", "<cmd>w<CR>")
 keymap.set("i", "<C-s>", "<cmd>w<CR>")
