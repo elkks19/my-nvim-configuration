@@ -22,7 +22,6 @@ treesitter.setup({
 	},
 	indent = { enable = false,},
 	ensure_installed = {
-		"arduino",
 		-- COSAS DE GO
 		"go",
 		"gomod",
@@ -30,6 +29,7 @@ treesitter.setup({
 		"gowork",
 		"gotmpl",
 		-- COSAS DE GO
+		"arduino",
 		"sql",
 		"make",
 		"cmake",

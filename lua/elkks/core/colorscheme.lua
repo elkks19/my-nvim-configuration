@@ -1,12 +1,20 @@
 vim.o.background = "dark"
 
--- INFO: KANAGAWA WILL BE THE DEFAULT COLORSHEME
+-- INFO: MOONBOW WILL BE THE DEFAULT COLORSCHEME
 --
-local status, colorscheme = pcall(vim.cmd, "colorscheme kanagawa")
+local status, colorscheme = pcall(vim.cmd, "colorscheme moonbow")
 if not status then
-	print("no se encontró kanagawa")
-return
+	print("no se encontró moonbow")
+	return
 end
+
+-- INFO: KANAGAWA
+--
+-- local status, colorscheme = pcall(vim.cmd, "colorscheme kanagawa")
+-- if not status then
+-- 	print("no se encontró kanagawa")
+-- return
+-- end
 
 
 -- INFO: MIASMA
@@ -43,13 +51,6 @@ end
 -- vim.g.gruvbox_material_colors_override = { bg0 = "#121212" }
 -- vim.g.gruvbox_material_better_performance = 1
 
--- INFO: MOONBOW
---
--- local status, colorscheme = pcall(vim.cmd, "colorscheme moonbow")
--- if not status then
--- 	print("no se encontró moonbow")
--- 	return
--- end
 
 -- INFO: DARKEARTH
 --
