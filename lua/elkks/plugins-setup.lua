@@ -115,6 +115,14 @@ return packer.startup(function(use)
 	})
 	-- MARKDOWN PREVIEWER
 
+	-- IMAGE VIEWER
+	use("vhyrro/luarocks.nvim")
+	use({
+		"3rd/image.nvim",
+		require = "vhyrro/luarocks.nvim",
+	})
+	-- IMAGE VIEWER
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
