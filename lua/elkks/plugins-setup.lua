@@ -123,6 +123,10 @@ return packer.startup(function(use)
 	})
 	-- IMAGE VIEWER
 
+	-- RESIZING WINDOWS MORE INTUITIVELY
+	use("chaoren/vim-resizewindow")
+	-- RESIZING WINDOWS MORE INTUITIVELY
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

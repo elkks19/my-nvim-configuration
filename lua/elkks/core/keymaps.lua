@@ -5,10 +5,10 @@ local keymap = vim.keymap
 keymap.set("n", "<leader>r", ":registers<CR>")
 
 keymap.set("i", "jk", "<esc>")
-keymap.set("n", "<leader>c", ":nohl<CR>")
+keymap.set("n", "<leader>cl", ":nohl<CR>")
 keymap.set("n", "x", '"_x')
-keymap.set("n", "<leader>+", "<C-a>")
-keymap.set("n", "<leader>- ", "<C-x>")
+-- keymap.set("n", "<leader>+", "<C-a>")
+-- keymap.set("n", "<leader>- ", "<C-x>")
 
 keymap.set("n", "<leader>sv", "<C-w>v")
 keymap.set("n", "<leader>sh", "<C-w>s")
@@ -17,8 +17,13 @@ keymap.set("n", "<leader>sc", ":close<CR>")
 
 keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
-keymap.set("n", "<leader>ne", ":tabn<CR>")
-keymap.set("n", "<leader>an", ":tabp<CR>")
+
+-- MOVE BETWEEN TABS USING ALT AND DOT OR COMMA
+keymap.set("n", "<A-.>", ":tabn<CR>")
+keymap.set("n", "<A-,>", ":tabp<CR>")
+-- INFO: OLD WAY
+-- keymap.set("n", "<leader>ne", ":tabn<CR>")
+-- keymap.set("n", "<leader>an", ":tabp<CR>")
 
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
@@ -45,16 +50,15 @@ keymap.set("n", "<A-8>", "8gt")
 keymap.set("n", "<A-9>", "9gt")
 keymap.set("n", "<A-0>", "0gt")
 
-keymap.set("n", "<leader>tt", ":ToggleTerm size=75 direction=vertical<CR>")
-keymap.set("t", "<esc>", "<C-\\><C-n> :close<CR>")
+-- THERE'S NO TERMINAL PLUGIN ANYMORE
+-- keymap.set("n", "<leader>tt", ":ToggleTerm size=75 direction=vertical<CR>")
+-- keymap.set("t", "<esc>", "<C-\\><C-n> :close<CR>")
 
 -- CHANGE THE COLORSCHEME
 keymap.set("n", "<leader>cs", "<cmd>Telescope colorscheme<cr>")
 
 -- GUARDAR CON CTRL+S
-keymap.set("n", "<C-s>", "<cmd>w<CR>")
-keymap.set("i", "<C-s>", "<cmd>w<CR>")
-keymap.set("v", "<C-s>", "<cmd>w<CR>")
+keymap.set({"n", "i", "v"}, "<C-s>", "<cmd>w<CR>")
 
 -- BORRAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE
 keymap.set("i", "<C-BS>", "<C-w>")
@@ -62,7 +66,7 @@ keymap.set("i", "<C-BS>", "<C-w>")
 keymap.set("i", "<C-H>", "<C-W>")
 
 -- Toggle Twilight
-keymap.set("n", "<leader>td", ":Twilight<CR>")
+keymap.set("n", "<leader>tt", ":Twilight<CR>")
 
 -- Toggle Markdown Preview
 keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>")
@@ -71,15 +75,26 @@ keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>")
 keymap.set("n", "<leader>ls", ":LiveServerToggle<CR>")
 
 -- CAMBIAR EL TAMAÑO DE LA VENTANA USANDO ALT + VIM MOTIONS
-keymap.set("n", "<A-l>", "<C-w><")
-keymap.set("n", "<A-h>", "<C-w>>")
-keymap.set("n", "<A-k>", "<C-w>+")
-keymap.set("n", "<A-j>", "<C-w>-")
+keymap.set("n", "<A-l>", "<Plug>ResizeWindowRight")
+keymap.set("n", "<A-h>", "<Plug>ResizeWindowLeft")
+keymap.set("n", "<S-k>", "<Plug>ResizeWindowUp")
+keymap.set("n", "<A-j>", "<Plug>ResizeWindowDown")
 -- CAMBIAR EL TAMAÑO DE LA VENTANA A MAS VELOCIDAD HACIENDO USO DE ALT + SHIFT + VIM MOTIONS
-keymap.set("n", "<A-L>", "5<C-w><")
-keymap.set("n", "<A-H>", "5<C-w>>")
-keymap.set("n", "<A-K>", "5<C-w>+")
-keymap.set("n", "<A-J>", "5<C-w>-")
+keymap.set("n", "<A-L>", "5<Plug>ResizeWindowRight")
+keymap.set("n", "<A-H>", "5<Plug>ResizeWindowLeft")
+keymap.set("n", "<A-K>", "5<Plug>ResizeWindowUp")
+keymap.set("n", "<A-J>", "5<Plug>ResizeWindowDown")
+
+-- INFO: OLD WAY
+-- keymap.set("n", "<A-L>", "5<C-w><")
+-- keymap.set("n", "<A-H>", "5<C-w>>")
+-- keymap.set("n", "<A-K>", "5<C-w>+")
+-- keymap.set("n", "<A-J>", "5<C-w>-")
+
+-- MOVER LA LINEA ABAJO O ARRIBA USANDO ESPACIO Y j o k
+-- USANDO CONTROL + ALT Y j o k (que considero es mas comodo)
+keymap.set("n", "<C-M-k>", ":m .-2<CR>==")
+keymap.set("n", "<C-M-j>", ":m .+1<CR>==")
 
 vim.keymap.set("n", "<leader>nt", function()
   require("todo-comments").jump_next()

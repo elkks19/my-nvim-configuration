@@ -46,8 +46,6 @@ Control + I para ir al siguiente paso
 Espacio + ff para buscar archivos
 Espacio + fc o fs para buscar texto en los archivos
 
-Espacio + tt para dividir la pantalla verticalmente y abrir una terminal
-
 Para hacer scroll:
 	Control + e para bajar una línea
 	Control + y para subir una línea
@@ -87,7 +85,8 @@ PARA EL CMP
 	K para ver la documentación
 
 TWILIGHT ES UNA EXTENSION QUE HACE DIMM EN EL FONDO DEL CODIGO QUE NO ESTAMOS USANDO
-	Espacio + td para hacerle toggle (por defecto esta desactivada al inicio)
+	Espacio + tt para hacerle toggle (por defecto esta desactivada al inicio)
+	ya no existe el plugin de la terminal
 
 PARA ACTIVAR O DESACTIVAR LA VISTA PREVIA DE ARCHIVOS MARKDOWN
 	Espacio + mp 
@@ -95,4 +94,10 @@ PARA ACTIVAR O DESACTIVAR LA VISTA PREVIA DE ARCHIVOS MARKDOWN
 PARA CAMBIAR EL TAMAÑO DE ALGUNA DIVISIÓN SE UTILIZA ALT + LAS TECLAS DE VIM MOTION 
 
 Espacio + cs para cambiar el colorscheme
+
+Control + Alt + j para mover una linea hacia abajo
+Control + Alt + k para mover una linea hacia arriba
+
+Alt + . para moverse una pestaña hacia la derecha
+Alt + , para moverse una pestaña hacia la izquierda
 
