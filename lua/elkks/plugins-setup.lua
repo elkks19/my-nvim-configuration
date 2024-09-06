@@ -127,6 +127,10 @@ return packer.startup(function(use)
 	use("chaoren/vim-resizewindow")
 	-- RESIZING WINDOWS MORE INTUITIVELY
 
+	-- RESIZING WINDOWS MORE INTUITIVELY
+	use("sindrets/winshift.nvim")
+	-- RESIZING WINDOWS MORE INTUITIVELY
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

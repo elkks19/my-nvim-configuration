@@ -77,7 +77,7 @@ keymap.set("n", "<leader>ls", ":LiveServerToggle<CR>")
 -- CAMBIAR EL TAMAÑO DE LA VENTANA USANDO ALT + VIM MOTIONS
 keymap.set("n", "<A-l>", "<Plug>ResizeWindowRight")
 keymap.set("n", "<A-h>", "<Plug>ResizeWindowLeft")
-keymap.set("n", "<S-k>", "<Plug>ResizeWindowUp")
+keymap.set("n", "<A-k>", "<Plug>ResizeWindowUp")
 keymap.set("n", "<A-j>", "<Plug>ResizeWindowDown")
 -- CAMBIAR EL TAMAÑO DE LA VENTANA A MAS VELOCIDAD HACIENDO USO DE ALT + SHIFT + VIM MOTIONS
 keymap.set("n", "<A-L>", "5<Plug>ResizeWindowRight")
