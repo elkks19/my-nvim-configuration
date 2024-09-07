@@ -32,9 +32,8 @@ end
 --
 --
 lualine.setup({
-   -- options = {
-   --    theme = custom_gruvbox
-   -- }
+    -- options = {
+    --    theme = custom_gruvbox
+    -- }
+
 })
---
---

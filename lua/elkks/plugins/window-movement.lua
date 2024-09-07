@@ -8,10 +8,6 @@ end
 vim.g.windowswap_map_keys = 0
 
 
--- INFO: move a window to a new location
-keymap.set("n", "<silent> <leader>mw", ":call WindowSwap#EasyWindowSwap()<CR>")
-
-
 
 -- INFO: THESE IS THE SETUP FOR winshift.nvim, that i don't quite like so im using
 -- the plugin up above instead

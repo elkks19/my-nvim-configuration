@@ -12,7 +12,7 @@ end
 telescope.setup({
 	defaults = {
 		layout_config = {
-			horizontal = {
+			vertical = {
 				preview_cutoff = 0,
 			},
 		},
@@ -22,6 +22,11 @@ telescope.setup({
 				["<C-j>"] = actions.move_selection_next,
 				["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 			},
+		},
+		pickers = {
+			colorscheme = {
+				enable_preview = true
+			}
 		},
 		extensions = {
 			["ui-select"] = {
@@ -34,7 +39,7 @@ telescope.setup({
 					vim.fn.setreg("", emoji.value)
 					print([[Presiona p o "*p para pegar este emoji]] .. emoji.value)
 				end,
-			}
+			},
 		},
 	},
 })

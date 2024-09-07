@@ -103,6 +103,11 @@ keymap.set("n", "<C-M-j>", ":m .+1<CR>==")
 keymap.set("v", "<C-M-k>", ":m '<-2<CR>gv=gv") -- move selected lines down(v)
 keymap.set("v", "<C-M-j>", ":m '>+1<CR>gv=gv") -- move selected lines up(v)
 
+
+-- INFO: move a window to a new location
+keymap.set("n", "<silent> <leader>mw", ":call WindowSwap#EasyWindowSwap()<CR>")
+
+
 vim.keymap.set("n", "<leader>nt", function()
   require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })

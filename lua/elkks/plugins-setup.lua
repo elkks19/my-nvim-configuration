@@ -67,7 +67,6 @@ return packer.startup(function(use)
 	use("xiyaowong/telescope-emoji.nvim")
 	use('nvim-telescope/telescope-ui-select.nvim')
 
-
 	use("github/copilot.vim")
 
 	use{"folke/todo-comments.nvim",
