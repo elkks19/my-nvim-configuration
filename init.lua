@@ -17,6 +17,7 @@ require("elkks.plugins.twilight")
 require("elkks.plugins.live-server")
 require("elkks.plugins.image")
 require("elkks.plugins.window-movement")
+require("elkks.plugins.notify")
 
 vim.api.nvim_set_hl(0, "Function", {ctermbg = 0, fg = "#ffaf38" })
 vim.api.nvim_set_hl(0, "Type", {ctermbg = 0, fg = "#f70233" })

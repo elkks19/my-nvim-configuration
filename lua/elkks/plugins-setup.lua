@@ -132,6 +132,10 @@ return packer.startup(function(use)
 	use("wesQ3/vim-windowswap")
 	-- SWAPPING WINDOWS MORE INTUITIVELY
 
+	-- CUTE NOTIFICATIONS
+	use('rcarriga/nvim-notify')
+	-- CUTE NOTIFICATIONS
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
