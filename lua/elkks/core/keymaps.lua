@@ -25,6 +25,10 @@ keymap.set("n", "<A-,>", ":tabp<CR>")
 -- keymap.set("n", "<leader>ne", ":tabn<CR>")
 -- keymap.set("n", "<leader>an", ":tabp<CR>")
 
+-- MOVE TABS TO THE RIGHT OR LEFT POSITION
+keymap.set("n", "<A-S-,>", ":-tabmove<cr>")
+keymap.set("n", "<A-S-.>", ":+tabmove<cr>")
+
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
@@ -95,6 +99,9 @@ keymap.set("n", "<A-J>", "5<Plug>ResizeWindowDown")
 -- USANDO CONTROL + ALT Y j o k (que considero es mas comodo)
 keymap.set("n", "<C-M-k>", ":m .-2<CR>==")
 keymap.set("n", "<C-M-j>", ":m .+1<CR>==")
+-- MOVER LA SELECCION DE LINEAS ABAJO O ARRIBA USANDO CONTROL + ALT Y j o k
+keymap.set("v", "<C-M-k>", ":m '<-2<CR>gv=gv") -- move selected lines down(v)
+keymap.set("v", "<C-M-j>", ":m '>+1<CR>gv=gv") -- move selected lines up(v)
 
 vim.keymap.set("n", "<leader>nt", function()
   require("todo-comments").jump_next()

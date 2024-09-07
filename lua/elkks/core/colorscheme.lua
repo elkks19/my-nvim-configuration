@@ -2,11 +2,11 @@ vim.o.background = "dark"
 
 -- INFO: MOONBOW WILL BE THE DEFAULT COLORSCHEME
 --
-local status, colorscheme = pcall(vim.cmd, "colorscheme moonbow")
-if not status then
-	print("no se encontró moonbow")
-	return
-end
+-- local status, colorscheme = pcall(vim.cmd, "colorscheme moonbow")
+-- if not status then
+-- 	print("no se encontró moonbow")
+-- 	return
+-- end
 
 -- INFO: KANAGAWA
 --

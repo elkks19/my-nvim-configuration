@@ -86,7 +86,9 @@ require('mason-lspconfig').setup({
 		'tailwindcss',
 		'templ',
 		'texlab',
-		'tsserver',
+		-- INFO: DEPRECATED
+		-- 'tsserver',
+		'vtsls',
 		'vuels',
 		'vimls',
 		'volar',
