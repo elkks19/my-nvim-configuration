@@ -1,3 +1,21 @@
+-- INFO: BASICALLY YOU CAN YANK A WINDOW AND PASTE IT IN ANOTHER WINDOW
+local setup, WindowSwap = pcall(require, "vim-windowswap")
+
+if not setup then
+	return
+end
+
+vim.g.windowswap_map_keys = 0
+
+
+-- INFO: move a window to a new location
+keymap.set("n", "<silent> <leader>mw", ":call WindowSwap#EasyWindowSwap()<CR>")
+
+
+
+-- INFO: THESE IS THE SETUP FOR winshift.nvim, that i don't quite like so im using
+-- the plugin up above instead
+--
 -- local setup, windshift = pcall(require, "winshift")
 --
 -- if not setup then
