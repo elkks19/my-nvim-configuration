@@ -60,7 +60,7 @@ keymap.set("n", "<A-0>", "0gt")
 keymap.set("n", "<leader>cs", "<cmd>Telescope colorscheme<cr>")
 
 -- GUARDAR CON CTRL+S
-keymap.set({"n", "i", "v"}, "<C-s>", ":w<CR>")
+keymap.set({"n", "i", "v"}, "<C-s>", "<cmd>w<CR>")
 
 -- BORRAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE
 keymap.set("i", "<C-BS>", "<C-w>")
