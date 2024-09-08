@@ -44,15 +44,18 @@ return packer.startup(function(use)
 	use("szw/vim-maximizer")
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
+
+	-- COMENTS
 	use("numToStr/Comment.nvim")
+  	use('JoosepAlviste/nvim-ts-context-commentstring')
+	-- COMENTS
+
 	use("nvim-tree/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			require("nvim-treesitter.install").update({ with_sync = true })
-		end,
+        run = ':TSUpdate'
 	})
 
 	use("windwp/nvim-autopairs")
@@ -135,6 +138,11 @@ return packer.startup(function(use)
 	-- CUTE NOTIFICATIONS
 	use('rcarriga/nvim-notify')
 	-- CUTE NOTIFICATIONS
+
+	-- NOICE
+	use("folke/noice.nvim")
+  	use('MunifTanjim/nui.nvim')
+	-- NOICE
 
 	if packer_bootstrap then
 		require("packer").sync()

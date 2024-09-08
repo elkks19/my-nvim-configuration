@@ -2,10 +2,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("n", "<leader>r", ":registers<CR>")
+keymap.set("n", "<leader>r", "<CMD>registers<CR>")
 
 keymap.set("i", "jk", "<esc>")
-keymap.set("n", "<leader>cl", ":nohl<CR>")
+keymap.set("n", "<leader>cl", "<CMD>nohl<CR>")
 keymap.set("n", "x", '"_x')
 -- keymap.set("n", "<leader>+", "<C-a>")
 -- keymap.set("n", "<leader>- ", "<C-x>")
@@ -15,15 +15,17 @@ keymap.set("n", "<leader>sh", "<C-w>s")
 keymap.set("n", "<leader>si", "<C-w>=")
 keymap.set("n", "<leader>sc", ":close<CR>")
 
-keymap.set("n", "<leader>to", ":tabnew<CR>")
-keymap.set("n", "<leader>tc", ":tabclose<CR>")
+-- OPEN A NEW TAB
+keymap.set("n", "<leader>to", "<CMD>tabnew<CR>")
+keymap.set({ "n", "i" } , "<A-t>", "<CMD>tabnew<CR>")
+
+-- CLOSE A TAB
+keymap.set("n", "<leader>tc", "<CMD>tabclose<CR>")
+keymap.set({ "n", "i" }, "<A-w>", "<CMD>tabclose<CR>")
 
 -- MOVE BETWEEN TABS USING ALT AND DOT OR COMMA
-keymap.set("n", "<A-.>", ":tabn<CR>")
-keymap.set("n", "<A-,>", ":tabp<CR>")
--- INFO: OLD WAY
--- keymap.set("n", "<leader>ne", ":tabn<CR>")
--- keymap.set("n", "<leader>an", ":tabp<CR>")
+keymap.set({ "n", "v", "i" }, "<A-.>", ":tabn<CR>")
+keymap.set({ "n", "v", "i" }, "<A-,>", ":tabp<CR>")
 
 -- MOVE TABS TO THE RIGHT OR LEFT POSITION
 keymap.set("n", "<A-S-,>", ":-tabmove<cr>")
@@ -31,7 +33,7 @@ keymap.set("n", "<A-S-.>", ":+tabmove<cr>")
 
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<silent> <leader>e", "<cmd> NvimTreeToggle<CR>")
 
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files find_command=rg,--hidden,--files,-u<cr>")
 keymap.set("n", "<leader>gf", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<cr>")
@@ -54,15 +56,11 @@ keymap.set("n", "<A-8>", "8gt")
 keymap.set("n", "<A-9>", "9gt")
 keymap.set("n", "<A-0>", "0gt")
 
--- THERE'S NO TERMINAL PLUGIN ANYMORE
--- keymap.set("n", "<leader>tt", ":ToggleTerm size=75 direction=vertical<CR>")
--- keymap.set("t", "<esc>", "<C-\\><C-n> :close<CR>")
-
 -- CHANGE THE COLORSCHEME
 keymap.set("n", "<leader>cs", "<cmd>Telescope colorscheme<cr>")
 
 -- GUARDAR CON CTRL+S
-keymap.set({"n", "i", "v"}, "<C-s>", "<cmd>w<CR>")
+keymap.set({"n", "i", "v"}, "<C-s>", ":w<CR>")
 
 -- BORRAR LA PALABRA A LA IZQUIERDA DEL CURSOR CON CTRL+BACKSPACE
 keymap.set("i", "<C-BS>", "<C-w>")
@@ -105,7 +103,7 @@ keymap.set("v", "<C-M-j>", ":m '>+1<CR>gv=gv") -- move selected lines up(v)
 
 
 -- INFO: move a window to a new location
-keymap.set("n", "<silent> <leader>mw", ":call WindowSwap#EasyWindowSwap()<CR>")
+keymap.set("n", "<leader>mw", ":call WindowSwap#EasyWindowSwap()<CR>")
 
 
 vim.keymap.set("n", "<leader>nt", function()

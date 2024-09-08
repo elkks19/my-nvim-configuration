@@ -18,8 +18,16 @@ require("elkks.plugins.live-server")
 require("elkks.plugins.image")
 require("elkks.plugins.window-movement")
 require("elkks.plugins.notify")
+require("elkks.plugins.noice")
 
 vim.api.nvim_set_hl(0, "Function", {ctermbg = 0, fg = "#ffaf38" })
 vim.api.nvim_set_hl(0, "Type", {ctermbg = 0, fg = "#f70233" })
 -- vim.cmd(':hi Normal guibg=none ctermbg=none')
 vim.g.c_syntax_for_h = 1
+
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    },
+})
+

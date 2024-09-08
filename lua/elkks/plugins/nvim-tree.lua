@@ -1,4 +1,3 @@
-
 local setup, nvimtree = pcall(require, "nvim-tree")
 if not setup then
    return
@@ -28,13 +27,17 @@ nvimtree.setup({
       },
    },
    filters = {
+	   enable = true,
 	   dotfiles = false,
+	   -- THIS LINE EXCLUDES ALL THE FILES GENERATED FROM TEMPL GENERATE COMMAND
+	   custom = { '/.*_templ.go', '/.*_templ.txt' },
+	   exclude = {},
    },
    git = {
-	  enable = true,
-	  ignore = false,
-	  timeout = 500,
-  },
+	   enable = true,
+	   ignore = false,
+	   timeout = 500,
+   },
 })
 
 
