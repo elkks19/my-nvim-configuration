@@ -23,6 +23,8 @@ require('mason-lspconfig').setup({
 		function(server_name)
 			if server_name ~= 'emmet_ls'
 				or server_name ~= 'intelephense'
+				or server_name ~= 'tailwindcss'
+				or server_name ~= 'htmx'
 
 				then
 				require('lspconfig')[server_name].setup({})
@@ -48,6 +50,15 @@ require('mason-lspconfig').setup({
 					'blade',
 					'php',
 				}
+			})
+
+			require('lspconfig')['htmx'].setup({
+				filetypes = { "html", "templ" },
+			})
+
+			require('lspconfig')['tailwindcss'].setup({
+				filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+				init_options = { userLanguages = { templ = "html" } },
 			})
 		end,
 	},
