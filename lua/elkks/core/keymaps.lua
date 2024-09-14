@@ -35,7 +35,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files find_command=rg,--hidden,--files,-u<cr>")
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files find_command=rg,--hidden,--files<cr>")
 keymap.set("n", "<leader>gf", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<cr>")
 
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
@@ -100,6 +100,9 @@ keymap.set("n", "<C-M-j>", ":m .+1<CR>==")
 -- MOVER LA SELECCION DE LINEAS ABAJO O ARRIBA USANDO CONTROL + ALT Y j o k
 keymap.set("v", "<C-M-k>", ":m '<-2<CR>gv=gv") -- move selected lines down(v)
 keymap.set("v", "<C-M-j>", ":m '>+1<CR>gv=gv") -- move selected lines up(v)
+
+-- MOVE A WINDOW TO A NEW TAB
+keymap.set("n", "<C-M-t>", "<C-w>T")
 
 
 -- INFO: move a window to a new location
