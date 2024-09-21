@@ -1,13 +1,7 @@
 return {
 	{
 		-- INFO: RESIZING WINDOWS MORE INTUITIVELY
-		'chaoren/vim-resizewindow',
-		cmd = {
-
-		},
-		keys = {
-
-		}
+		'chaoren/vim-resizewindow'
 	},
 	{
 		'christoomey/vim-tmux-navigator',
@@ -32,6 +26,12 @@ return {
 	},
 	{
 		'szw/vim-maximizer',
+		cmd = {
+			'MaximizerToggle'
+		},
+		keys = {
+			{ '<leader>sm', '<cmd>MaximizerToggle<CR>' }
+		}
 	},
 }
 

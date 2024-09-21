@@ -21,7 +21,7 @@ end
 				 CATPPUCCIN 
 ]]
 
-local status, colorscheme = pcall(vim.cmd, "colorscheme")
+local colorscheme = vim.g.colorscheme
 
 if not status then
 	return

@@ -1,4 +1,13 @@
 return {
 	'folke/twilight.nvim',
-	config = true
+	config = true,
+	cmd = {
+		'Twilight',
+		'TwilightEnable',
+		'TwilightDisable',
+		'TwilightToggle',
+	},
+	keys = {
+		{ '<leader>tt', '<cmd>TwilightToggle<CR>' },
+	},
 }

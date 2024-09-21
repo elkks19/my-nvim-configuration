@@ -12,6 +12,7 @@ return {
     },
     opts = {
         window = {
+			width = 30,
             mappings = {
                 ["P"] = { "toggle_preview", config = { use_float = false, use_image_nvim = true }}
             },
@@ -19,14 +20,15 @@ return {
         close_if_last_window = true,
 		filesystem = {
 			filtered_items = {
-				hide_dotfiles = true,
-            	hide_gitignored = false,
+				visible = false,
+				hide_dotfiles = false,
+            	hide_gitignored = true,
 				hide_by_name = {
 					"node_modules",
 				},
 				hide_by_pattern = {
-					'/.*_templ.go',
-					'/.*_templ.txt',
+					'*/.*_templ.go',
+					'*/.*_templ.txt',
 				},
 				always_show = {
 				  	".gitignored",
