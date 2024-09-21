@@ -1,11 +1,9 @@
-vim.g.mapleader = " "
-
 local keymap = vim.keymap
 
-keymap.set("n", "<leader>r", "<CMD>registers<CR>")
+keymap.set("n", "<leader>r", "<CMD>Telescope registers<CR>")
 
 keymap.set("i", "jk", "<esc>")
-keymap.set("n", "<leader>cl", "<CMD>nohl<CR>")
+keymap.set("n", "<leader>cl", ":nohl<CR>")
 keymap.set("n", "x", '"_x')
 -- keymap.set("n", "<leader>+", "<C-a>")
 -- keymap.set("n", "<leader>- ", "<C-x>")
@@ -32,8 +30,6 @@ keymap.set("n", "<A-S-,>", ":-tabmove<cr>")
 keymap.set("n", "<A-S-.>", ":+tabmove<cr>")
 
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
-
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files find_command=rg,--hidden,--files<cr>")
 keymap.set("n", "<leader>gf", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<cr>")
