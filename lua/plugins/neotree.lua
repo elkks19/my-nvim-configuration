@@ -1,7 +1,7 @@
 return {
     'nvim-neo-tree/neo-tree.nvim',
 	keys = {
-		{ "<leader>e", "<cmd>Neotree left toggle<cr>", desc = "Neotree" }
+		{ "<leader>e", "<cmd>Neotree left toggle<cr>", desc = "Toggle file explorer" }
 	},
     branch = 'v3.x',
     dependencies = {
@@ -18,6 +18,7 @@ return {
             },
         },
         close_if_last_window = true,
+  		auto_clean_after_session_restore = true,
 		filesystem = {
 			filtered_items = {
 				visible = false,

@@ -8,6 +8,6 @@ return {
 		'TwilightToggle',
 	},
 	keys = {
-		{ '<leader>tt', '<cmd>TwilightToggle<CR>' },
+		{ '<leader>tt', '<cmd>TwilightToggle<CR>', { desc = 'Toggle Twilight' }},
 	},
 }

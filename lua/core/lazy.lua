@@ -20,4 +20,16 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 
-require("lazy").setup("plugins")
+require("lazy").setup({
+	{ import = "plugins" },
+	{ import = "plugins.lsp" },
+	-- { import = "plugins.dashboard.dashboard" },
+
+	checker = {
+		enabled = true,
+		notify = false
+	},
+	change_detection = {
+		notify = false
+	}
+})

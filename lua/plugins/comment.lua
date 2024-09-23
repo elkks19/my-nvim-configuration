@@ -17,6 +17,6 @@ return {
                     component_declaration = '<!-- %s -->',
                 }
             }
-        }     
+        }
     }
 }

@@ -2,26 +2,25 @@ return {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
 	cmd = 'Telescope',
 	keys = {
-		{ '<leader>cs', '<cmd>Telescope colorscheme<cr>' },
-		{ '<leader>r', '<CMD>Telescope registers<CR>' },
-		{ '<leader>ff', '<cmd>Telescope find_files find_command=rg,--hidden,--files<cr>' },
-		{ '<leader>gf', '<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<cr>' },
-		{ '<leader>fs', '<cmd>Telescope live_grep<cr>' },
-		{ '<leader>fc', '<cmd>Telescope grep_string<cr>' },
-		{ '<leader>fb', '<cmd>Telescope buffers<cr>' },
-		{ '<leader>fh', '<cmd>Telescope help_tags<cr>' },
-		{ '<leader>fe', '<cmd>Telescope emoji<cr>' },
-		{ '<leader>ft', '<cmd>TodoTelescope<cr>' },
+		{ '<leader>cs', '<cmd>Telescope colorscheme<cr>', { desc = 'Select colorscheme' } },
+		{ '<leader>r', '<CMD>Telescope registers<CR>', { desc = 'Select register' }},
+		{ '<leader>ff', '<cmd>Telescope find_files find_command=rg,--hidden,--files<cr>', { desc = 'Find files'}},
+		{ '<leader>gf', '<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<cr>', { desc = 'Find files but include hidden and gitignored' }},
+		{ '<leader>fs', '<cmd>Telescope live_grep<cr>', { desc = 'Greps in files on cwd' }},
+		{ '<leader>fc', '<cmd>Telescope grep_string<cr>', { desc = 'Greps a string on files on cwd' }},
+		{ '<leader>fe', '<cmd>Telescope emoji<cr>', { desc = 'Select an emoji' }},
+		{ '<leader>ft', '<cmd>TodoTelescope<cr>', { desc = 'Select a todo tag' }},
 	},
-	dependencies = { 
+	dependencies = {
 		'nvim-lua/plenary.nvim',
 		'BurntSushi/ripgrep',
-		{ 
-			'nvim-telescope/telescope-fzf-native.nvim', 
-			build = 'make' 
+		{
+			'nvim-telescope/telescope-fzf-native.nvim',
+			build = 'make'
 		},
 		'xiyaowong/telescope-emoji.nvim',
 		'nvim-telescope/telescope-ui-select.nvim',
+		"nvim-telescope/telescope-file-browser.nvim",
 	},
 	config = function()
 		local telescope = require('telescope')
