@@ -2,7 +2,7 @@ return {
 	'williamboman/mason.nvim',
 	dependencies = {
 		'williamboman/mason-lspconfig.nvim',
-    	"neovim/nvim-lspconfig",
+		"neovim/nvim-lspconfig",
 		'hrsh7th/cmp-nvim-lsp',
 		{ 'antosha417/nvim-lsp-file-operations', config = true }
 	},
@@ -73,14 +73,14 @@ return {
 						opts.desc = 'Show LSP references'
 						keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
 
-						opts.desc = 'Go to Declaration'
-						keymap.set('n', 'gd', function ()
+						opts.desc = 'Go to Definition'
+						keymap.set('n', 'gd', function()
 							vim.cmd([[vsplit]])
-							vim.lsp.buf.declaration()
+							vim.lsp.buf.definition()
 						end, opts)
 
-						opts.desc = 'Show LSP definitions'
-						keymap.set('n', 'gD', '<cmd>Telescope lsp_definitions<cr>', opts)
+						opts.desc = 'Show LSP declaration'
+						keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 
 						opts.desc = 'Show LSP implementations'
 						keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', opts)
@@ -89,7 +89,7 @@ return {
 						keymap.set('n', 'gt', '<cmd>Telescope lsp_type_definitions<cr>', opts)
 
 						opts.desc = 'Show LSP code actions'
-						keymap.set({'n', 'v'}, '<leader>aa', vim.lsp.buf.code_action, opts)
+						keymap.set({ 'n', 'v' }, '<leader>aa', vim.lsp.buf.code_action, opts)
 
 						opts.desc = 'Smart rename'
 						keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
@@ -104,11 +104,11 @@ return {
 						keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 					end
 					local capabilities = cmp_nvim_lsp.default_capabilities()
-					if 		server_name ~= 'emmet_ls'
-						or 	server_name ~= 'intelephense'
-						or 	server_name ~= 'tailwindcss'
-						or 	server_name ~= 'htmx'
-						then
+					if server_name ~= 'emmet_ls'
+						or server_name ~= 'intelephense'
+						or server_name ~= 'tailwindcss'
+						or server_name ~= 'htmx'
+					then
 						lspconfig[server_name].setup({
 							on_attach = lsp_attach,
 							capabilities = capabilities,
