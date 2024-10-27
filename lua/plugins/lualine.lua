@@ -38,6 +38,13 @@ return {
 		lualine.setup({
 			options = {
 				theme = custom_theme
+			},
+			sections = {
+				lualine_c = {
+					function()
+						return require('auto-session.lib').current_session_name(true)
+					end
+				}
 			}
 		})
 	end

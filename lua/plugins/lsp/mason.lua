@@ -4,7 +4,6 @@ return {
 		'williamboman/mason-lspconfig.nvim',
 		"neovim/nvim-lspconfig",
 		'hrsh7th/cmp-nvim-lsp',
-		{ 'antosha417/nvim-lsp-file-operations', config = true }
 	},
 	lazy = false,
 	events = { 'BufReadPre', 'BufNewFile' },
@@ -103,17 +102,17 @@ return {
 						opts.desc = 'Show LSP hover'
 						keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 					end
+
 					local capabilities = cmp_nvim_lsp.default_capabilities()
-					if server_name ~= 'emmet_ls'
-						or server_name ~= 'intelephense'
-						or server_name ~= 'tailwindcss'
-						or server_name ~= 'htmx'
-					then
-						lspconfig[server_name].setup({
-							on_attach = lsp_attach,
-							capabilities = capabilities,
-						})
-					end
+					lspconfig[server_name].setup({
+						on_attach = lsp_attach,
+						capabilities = capabilities,
+					})
+
+					lspconfig['sqls'].setup({
+						on_attach = lsp_attach,
+						capabilities = capabilities,
+					})
 
 					lspconfig['emmet_ls'].setup({
 						on_attach = lsp_attach,
