@@ -49,8 +49,8 @@ return {
 					"node_modules",
 				},
 				hide_by_pattern = {
-					'*/.*_templ.go',
-					'*/.*_templ.txt',
+					'*/*_templ.go',
+					'*/*_templ.txt',
 				},
 				always_show = {
 				  	".gitignored",

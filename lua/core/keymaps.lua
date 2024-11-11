@@ -20,8 +20,8 @@ keymap.set("n", "<leader>tc", "<CMD>tabclose<CR>", { desc = "close tab" })
 keymap.set({ "n", "i" }, "<A-w>", "<CMD>tabclose<CR>", { desc = "close tab" })
 
 -- MOVE BETWEEN TABS USING ALT AND DOT OR COMMA
-keymap.set({ "n", "v", "i" }, "<A-.>", ":tabn<CR>", { desc = "move to the next tab" })
-keymap.set({ "n", "v", "i" }, "<A-,>", ":tabp<CR>", { desc = "move to the next tab" })
+keymap.set({ "n", "v", "i" }, "<A-.>", "<cmd>tabn<CR>", { desc = "move to the next tab" })
+keymap.set({ "n", "v", "i" }, "<A-,>", "<cmd>tabp<CR>", { desc = "move to the next tab" })
 
 -- MOVE TABS TO THE RIGHT OR LEFT POSITION
 keymap.set("n", "<A-S-,>", ":-tabmove<cr>", { desc = "move tab to the left" })
